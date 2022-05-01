@@ -5,6 +5,9 @@ public class Test {
     private String test = "constructor";
     private int id = 0;
     
+    public Test(String what) {
+        this.what = what;
+    }
     public Test(int id) {
         this.id = id;
     }
@@ -13,7 +16,7 @@ public class Test {
         this.test = test;
     }
     void say() {
-        System.out.println(String.format("what %s, test %s, id=%d ", what, test, id));
+        System.out.println(String.format("what=%s, test=%s, id=%d ", what, test, id));
     }
     public String getWhat() {
         return what;
