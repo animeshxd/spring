@@ -6,8 +6,11 @@
 
     <bean id="test" class="example.Test">
         <!-- <property name="what" value="hello welcome to ..."></property> -->
-        <constructor-arg index="1" value="hello"></constructor-arg>    
-        <constructor-arg index="0" value="hi"></constructor-arg>
+        
+        <!-- <constructor-arg index="1" value="hello"></constructor-arg>     -->
+        <!-- <constructor-arg index="0" value="hi"></constructor-arg> -->
+
+        <constructor-arg type="int" value="69"></constructor-arg>
     </bean>
 
 </beans>
