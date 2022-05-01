@@ -5,7 +5,9 @@
 <beans>
 
     <bean id="test" class="example.Test">
-        <property name="what" value="hello welcome to ..."></property>
+        <!-- <property name="what" value="hello welcome to ..."></property> -->
+        <constructor-arg value="hello"></constructor-arg>    
+        <constructor-arg value="hi"></constructor-arg>
     </bean>
 
 </beans>
