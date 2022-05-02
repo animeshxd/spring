@@ -11,7 +11,12 @@
 
         <!-- <constructor-arg type="int" value="69"/> -->
         <!-- <constructor-arg type="java.lang.String" value="hello" /> -->
-        <constructor-arg ref="hello-alias"/>
+        <constructor-arg> 
+            <!-- <ref bean="hello-alias"/> -->
+
+            <!-- explicit reference by id-->
+            <idref bean="hello"/> 
+        </constructor-arg>
     </bean>
 
     <bean id="hello" class="java.lang.String">
