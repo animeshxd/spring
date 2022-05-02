@@ -10,5 +10,8 @@ public class App
         ApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
         Test test = (Test) ctx.getBean("test");
         test.say();
+
+        RefTest tst = (RefTest) ctx.getBean("reftest");
+        tst.print();
     }
 }

@@ -14,4 +14,13 @@
         <constructor-arg type="java.lang.String" value="hello"/>
     </bean>
 
+    <bean id="info" class="example.Info">
+        <property name="id" value="69"/>
+        <property name="name" value="me"/>
+        
+    </bean>
+    <bean id="reftest" class="example.RefTest">
+        <constructor-arg ref="info" />
+    </bean>
+
 </beans>
