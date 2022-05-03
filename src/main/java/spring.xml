@@ -17,6 +17,13 @@
             <!-- explicit reference by id-->
             <idref bean="hello"/> 
         </constructor-arg>
+        <property name="list">
+            <list>
+                <value>10</value>
+                <value>55</value>
+                <value>90</value>
+            </list>
+        </property>
     </bean>
 
     <bean id="hello" class="java.lang.String">
