@@ -11,11 +11,11 @@
 
         <!-- <constructor-arg type="int" value="69"/> -->
         <!-- <constructor-arg type="java.lang.String" value="hello" /> -->
-        <constructor-arg> 
+        <constructor-arg>
             <!-- <ref bean="hello-alias"/> -->
 
             <!-- explicit reference by id-->
-            <idref bean="hello"/> 
+            <idref bean="hello" />
         </constructor-arg>
         <property name="list">
             <list>
@@ -32,15 +32,13 @@
     <alias name="hello" alias="hello-alias" />
 
 
+    <bean id="reftest" class="example.RefTest" autowire="constructor">
+        <!-- <constructor-arg></constructor-arg> -->
 
-    <bean id="reftest" class="example.RefTest">
-        <constructor-arg>
-            <bean class="example.Info">
-                <property name="id" value="69" />
-                <property name="name" value="me" />
-            </bean>
-        </constructor-arg>
-
+    </bean>
+    <bean class="example.Info"> 
+        <property name="id" value="69" />
+        <property name="name" value="hehe" />
     </bean>
 
 </beans>
