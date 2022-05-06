@@ -18,5 +18,6 @@ public class App
 
         Aware aware = (Aware) ctx.getBean("aware");
         aware.print();
+        aware.printInfo();
     }
 }
