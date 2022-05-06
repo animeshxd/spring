@@ -11,7 +11,7 @@ public class RefTest {
      *  (We need to explicitly define no args constructor for autowire="byName")
      * */
     public RefTest(){
-        System.out.println("Constructor called");
+        System.out.println("RefTest Constructor called");
     } 
     public void print(){
         System.out.printf("id=%d, name=%s \n", info.getId(), info.getName());
