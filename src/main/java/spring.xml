@@ -32,11 +32,11 @@
     <alias name="hello" alias="hello-alias" />
 
 
-    <bean id="reftest" class="example.RefTest" autowire="constructor">
+    <bean id="reftest" class="example.RefTest" autowire="byName">
         <!-- <constructor-arg></constructor-arg> -->
 
     </bean>
-    <bean class="example.Info"> 
+    <bean class="example.Info" id="info"> 
         <property name="id" value="69" />
         <property name="name" value="hehe" />
     </bean>
