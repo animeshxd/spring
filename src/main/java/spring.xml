@@ -32,7 +32,7 @@
     <alias name="hello" alias="hello-alias" />
 
 
-    <bean id="reftest" class="example.RefTest" autowire="byName">
+    <bean id="reftest" class="example.RefTest" autowire="byType">
         <!-- <constructor-arg></constructor-arg> -->
 
     </bean>
