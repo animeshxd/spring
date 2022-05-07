@@ -24,7 +24,7 @@
 
     <bean id="test" class="example.Test" parent="parentlist">
         <constructor-arg index="0">
-            <list>
+            <list merge="true">
                 <value type="java.lang.Integer">10</value>
                 <value type="java.lang.Integer">11</value>
                 <value type="java.lang.Integer">12</value>
