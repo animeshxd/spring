@@ -1,3 +1,5 @@
 {
-    "java.configuration.updateBuildConfiguration": "automatic"
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "editor.guides.bracketPairsHorizontal": true,
+    "editor.guides.bracketPairs": true
 }

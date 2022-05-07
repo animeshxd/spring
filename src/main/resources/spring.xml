@@ -2,45 +2,5 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 
 <beans>
-
-    <bean id="test" class="example.Test">
-        <!-- <property name="what" value="hello welcome to ..."/> -->
-
-        <!-- <constructor-arg index="1" value="hello"/>    -->
-        <!-- <constructor-arg index="0" value="hi"/> -->
-
-        <!-- <constructor-arg type="int" value="69"/> -->
-        <!-- <constructor-arg type="java.lang.String" value="hello" /> -->
-        <constructor-arg>
-            <!-- <ref bean="hello-alias"/> -->
-
-            <!-- explicit reference by id-->
-            <idref bean="hello" />
-        </constructor-arg>
-        <property name="list">
-            <list>
-                <value>10</value>
-                <value>55</value>
-                <value>90</value>
-            </list>
-        </property>
-    </bean>
-
-    <bean id="hello" class="java.lang.String">
-        <constructor-arg value="hello welcome to ..." />
-    </bean>
-    <alias name="hello" alias="hello-alias" />
-
-
-    <bean id="reftest" class="example.RefTest" autowire="byType" scope="singleton">
-        <!-- <constructor-arg></constructor-arg> -->
-
-    </bean>
-    <bean class="example.Info" id="info"> 
-        <property name="id" value="69" />
-        <property name="name" value="hehe" />
-    </bean>
-
-    <bean id="aware" class="example.Aware"></bean>
-
+    
 </beans>
