@@ -2,5 +2,33 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 
 <beans>
-    
+    <bean id="parent" class="example.Info" abstract="true">
+        <property name="id" value="1"></property>
+    </bean>
+    <bean id="info1" parent="parent" class="example.Info">
+        <property name="name" value="hello"></property>
+    </bean>
+    <bean id="info2" parent="parent" class="example.Info">
+        <property name="name" value="bye"></property>
+    </bean>
+
+    <bean id="parentlist" class="example.Test" abstract="true">
+        <constructor-arg index="0">
+            <list>
+                <value type="java.lang.Integer">1</value>
+                <value type="java.lang.Integer">2</value>
+                <value type="java.lang.Integer">3</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="test" class="example.Test" parent="parentlist">
+        <constructor-arg index="0">
+            <list merge="true">
+                <value type="java.lang.Integer">10</value>
+                <value type="java.lang.Integer">11</value>
+                <value type="java.lang.Integer">12</value>
+            </list>
+        </constructor-arg>
+    </bean>
 </beans>
