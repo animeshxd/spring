@@ -22,7 +22,7 @@
         </constructor-arg>
     </bean>
 
-    <bean id="test" class="example.Test" parent="parentlist" init-method="afterPropertiesSet">
+    <bean id="test" class="example.Test" parent="parentlist" init-method="afterPropertiesSet" destroy-method="destroy">
         <constructor-arg index="0">
             <list merge="true">
                 <value type="java.lang.Integer">10</value>
