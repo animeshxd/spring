@@ -8,6 +8,7 @@ public class App
     public static void main( String[] args )
     {
         AbstractApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
+        ctx.registerShutdownHook();
         // Info info1 = (Info) ctx.getBean("info1");
         // info1.print();
 
@@ -16,6 +17,5 @@ public class App
 
         Test test = (Test) ctx.getBean("test");
         test.print();
-        ctx.close();
     }
 }
