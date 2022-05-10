@@ -32,4 +32,5 @@
         </constructor-arg>
     </bean>
     <bean class="example.PostProcessor"/>
+    <bean class="example.FactoryPostProcessor"/>
 </beans>
