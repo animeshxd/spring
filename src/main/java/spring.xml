@@ -31,4 +31,5 @@
             </list>
         </constructor-arg>
     </bean>
+    <bean class="example.PostProcessor"/>
 </beans>
