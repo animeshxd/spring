@@ -1,6 +1,7 @@
 package example;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Test {
 
@@ -15,6 +16,7 @@ public class Test {
     }
 
     @Autowired()
+    @Qualifier("personx")
     public void setInfo(Info info) {
         this.info = info;
     }
