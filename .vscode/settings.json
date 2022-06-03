@@ -1,5 +1,8 @@
 {
     "java.configuration.updateBuildConfiguration": "automatic",
     "editor.guides.bracketPairsHorizontal": true,
-    "editor.guides.bracketPairs": true
+    "editor.guides.bracketPairs": true,
+    "cSpell.words": [
+        "personx"
+    ]
 }

@@ -16,7 +16,7 @@ public class Test {
     }
 
     @Autowired()
-    @Qualifier("personx")
+    @Good()
     public void setInfo(Info info) {
         this.info = info;
     }
