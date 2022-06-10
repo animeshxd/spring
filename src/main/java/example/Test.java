@@ -16,7 +16,6 @@ public class Test {
     }
 
     @Autowired()
-    @Good()
     public void setInfo(Info info) {
         this.info = info;
     }
