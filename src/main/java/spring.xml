@@ -7,11 +7,11 @@
         <property name="age" value="22"></property>
     </bean>
 
-    <bean id="person2" class="example.Info" primary="true">
+    <!-- <bean id="person2" class="example.Info">
         <qualifier type="example.Good"></qualifier>
         <property name="name" value="Bad"></property>
         <property name="age" value="12"></property>
-    </bean>
+    </bean> -->
 
     <bean id="test" class="example.Test"></bean>
     <context:annotation-config/>
