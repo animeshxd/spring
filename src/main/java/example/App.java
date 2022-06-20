@@ -9,7 +9,7 @@ public class App
     {
         AbstractApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
         ctx.registerShutdownHook();
-        Test info = ctx.getBean("test", Test.class);
+        Test info = ctx.getBean("do", Test.class);
         info.print();
     }
 }

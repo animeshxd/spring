@@ -6,7 +6,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("do")
 // default bean id "test"
 public class Test {
 
