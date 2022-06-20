@@ -4,6 +4,10 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.annotation.Resource;
 
+import org.springframework.stereotype.Component;
+
+@Component
+// default bean id "test"
 public class Test {
 
     Info info;
