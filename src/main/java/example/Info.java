@@ -5,7 +5,7 @@ public class Info {
     int age;
     
     void print(){
-        System.out.printf("name=%s, age=%d", name, age);
+        System.out.printf("name=%s, age=%d\n", name, age);
     }
 
     public String getName() {

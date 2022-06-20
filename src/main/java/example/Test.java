@@ -1,5 +1,7 @@
 package example;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import javax.annotation.Resource;
 
 public class Test {
@@ -18,6 +20,16 @@ public class Test {
     // default name "info"
     public void setInfo(Info info) {
         this.info = info;
+    }
+
+    @PostConstruct
+    public void init(){
+        System.out.println("init() called for Test");
+    }
+    @PreDestroy
+    public void destroy(){
+        System.out.println("destroy() called for Test");
+
     }
 
 }
