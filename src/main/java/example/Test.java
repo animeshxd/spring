@@ -15,6 +15,7 @@ public class Test {
     }
 
     @Resource // type -> name -> primary
+    // default name "info"
     public void setInfo(Info info) {
         this.info = info;
     }
