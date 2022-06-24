@@ -4,12 +4,22 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Test {
+                                      // uses src/main/java/data.properties if src\main\resources\data.properties does not exists 
+@PropertySource("data.properties")    //  java/data.properties gets overridden by resources\data.properties
+public class Test {                   //  it will use java/data.properties if it more data than resources\data.properties
     
+
+    // Auto wireing env using @PropertySource
+    @Autowired
+    Environment env;
+
     // https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#expressions
     @Value("StringValue")
     public String value;
@@ -26,7 +36,8 @@ public class Test {
     @Value("#{set}")
     public Set<String> set;
 
-    @Value("#{ systemProperties['os.name'] }")
+    // @Value("#{ systemProperties['os.name'] }")
+    @Value("${os.name}")
     public String os;
 
     //@Value("#{ systemEnvironment['NUMBER_OF_PROCESSORS'] }")
@@ -36,11 +47,23 @@ public class Test {
     @Value("${UNKNOWN:Default Value}")
     public String unknownenv;
 
+    @Value("${data}")
+    public String propertieString; // from data.properties file data=
 
-    @Override
-    public String toString() {
-        return "Test [list=" + list + ", map=" + map + ", os=" + os + ", processor=" + processor + ", set=" + set
-                + ", unknownenv=" + unknownenv + ", value=" + value + ", value2=" + value2 + "]";
+    public void print(){
+        System.out.println(", value           = " + value);
+        System.out.println(", list            = " + list);
+        System.out.println(", map             = " + map);
+        System.out.println(", value2          = " + value2);
+        System.out.println(", set             = " + set);
+        System.out.println(", os              = " + os);
+        System.out.println(", processor       = " + processor);
+        System.out.println(", unknownenv      = " + unknownenv);
+        System.out.println(", propertieString = " + propertieString);
+        System.out.println(", propertieString = " + env.getProperty("data"));
+
+
     }
+
     
 }
