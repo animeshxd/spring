@@ -12,7 +12,7 @@ import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope("prototype")
+@Scope("singleton")
                                       // uses src/main/java/data.properties if src\main\resources\data.properties does not exists 
 @PropertySource("data.properties")    //  java/data.properties gets overridden by resources\data.properties
 public class Test {                   //  it will use java/data.properties if it more data than resources\data.properties
