@@ -9,5 +9,7 @@ public class App {
         Test test = (Test) context.getBean("test");
         test.print();
         
+        context.getBean("test");
+        context.getBean("test");
     }
 }
