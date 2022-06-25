@@ -28,16 +28,16 @@ public class Test {                   //  it will use java/data.properties if it
     @Value("StringValue")
     public String value;
 
-    @Value("#{list}")
+    @Value("#{list}") // <util:list />
     public List<String> list;
 
-    @Value("#{map}")
+    @Value("#{map}") // <util:map />
     public Map<Integer, String> map;
 
     @Value("#{map['2']}") // @Value("#{map[2]}") will not work
     public String value2;
 
-    @Value("#{set}")
+    @Value("#{set}")  // <util:set />
     public Set<String> set;
 
     // @Value("#{ systemProperties['os.name'] }")
@@ -52,8 +52,25 @@ public class Test {                   //  it will use java/data.properties if it
     public String unknownenv;
 
     @Value("${data}")
-    public String propertieString; // from data.properties file data=
+    public String propertieString; // from data.properties file data
+    
+    @Value("#{ 5 + 6 }")
+    // @Value("#{ 5 < 6? 1 : 0 }")
+    public int expdata;
 
+    @Value("#{ T(java.lang.Integer).parseInt('55') }") // call static method 
+    public int returnvaluestaticmethod;         // #{ T(class).staticmethod(args) }
+    
+    @Value("#{ T(java.lang.Math).PI }") // get static variable
+    public double datastaticvar; // #{ T(class).staticvariable }
+
+    @Value("#{ new String('new string object') }")
+    public String newobject;  // create object
+     
+    @Value("#{ 'true' }")
+    //@Value("#{ 8 > 5 }")
+    public boolean boolvalue;
+    
     public void print(){
         System.out.println(", value           = " + value);
         System.out.println(", list            = " + list);
@@ -65,6 +82,11 @@ public class Test {                   //  it will use java/data.properties if it
         System.out.println(", unknownenv      = " + unknownenv);
         System.out.println(", propertieString = " + propertieString);
         System.out.println(", propertieString = " + env.getProperty("data"));
+        System.out.println(", expdata         = " + expdata);
+        System.out.println(", returnvaluestaticmethod = " + returnvaluestaticmethod);
+        System.out.println(", valuestaticvar   = " + datastaticvar);
+        System.out.println(", newobject       = " + newobject);
+        System.out.println(", boolvalue       = " + boolvalue);
 
 
     }
