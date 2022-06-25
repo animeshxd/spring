@@ -11,29 +11,4 @@
     http://www.springframework.org/schema/util
     http://www.springframework.org/schema/util/spring-util-4.3.xsd">
 
-     
-    <util:list list-class="java.util.LinkedList" id="list">
-        <value>value1</value>
-        <value>value2</value>
-        <value>value3</value>
-        <value>value4</value>
-    </util:list>
-
-    <util:map id="map" map-class="java.util.HashMap">
-        <entry key="1" value="value1"></entry>
-        <entry key="2" value="value2"></entry>
-        <entry key="3" value="value3"></entry>
-        <entry key="4" value="value4"></entry>
-    </util:map>
-
-    <util:set id="set" set-class="java.util.HashSet">
-        <value>value1</value>
-        <value>value2</value>
-        <value>value3</value>
-        <value>value1</value>
-    </util:set>
-
-
-    <context:annotation-config/>
-    <context:component-scan base-package="example"/>
 </beans>
