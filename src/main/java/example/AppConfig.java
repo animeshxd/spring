@@ -2,6 +2,7 @@ package example;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 @Configuration
 public class AppConfig {
@@ -12,7 +13,13 @@ public class AppConfig {
     }
 
     @Bean //  info2
+    @Primary
     public Info info2(){
         return new Info("B", 21);
+    }
+
+    @Bean
+    public Test test(){
+        return new Test();
     }
 }
