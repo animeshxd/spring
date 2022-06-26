@@ -8,7 +8,7 @@ public class App {
         //https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-java
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
-        Test test = context.getBean("test", Test.class);
+        Test test = context.getBean("test1", Test.class);
         test.print();   
     }
 }
